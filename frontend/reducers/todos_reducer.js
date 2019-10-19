@@ -17,7 +17,6 @@ const initialState = {
 
 const todosReducer = (state = initialState, action) => {
   Object.freeze(state);
-  let newState = Object.assign({}, state);
 
   switch (action.type) {
     case RECEIVE_TODOS:
@@ -33,6 +32,7 @@ const todosReducer = (state = initialState, action) => {
       return Object.assign({}, state, todo);
 
     case REMOVE_TODO:
+      let newState = Object.assign({}, state);
       delete newState[action.todo.id];
       return newState;
 

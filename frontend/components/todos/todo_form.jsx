@@ -14,6 +14,8 @@ const TodoForm = props => {
       done: false
     }
     props.receiveTodo(todo);
+    changeTitle('');
+    changeBody('');
   }
 
   return (

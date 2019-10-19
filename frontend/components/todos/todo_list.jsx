@@ -6,7 +6,7 @@ export default (props) => {
   return (
     <>
       <ul>
-          {props.todos.map(todo => <TodoListItem key={todo.id} todo={todo} removeTodo={props.removeTodo} />)}
+          {props.todos.map(todo => <TodoListItem key={todo.id} todo={todo} removeTodo={props.removeTodo} receiveTodo={props.receiveTodo} />)}
       </ul>
       <TodoListForm receiveTodo={props.receiveTodo}/>
     </>
